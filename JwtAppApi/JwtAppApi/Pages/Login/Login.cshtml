@@ -1,0 +1,59 @@
+﻿@page
+@model JwtAppApi.Pages.Login.LoginModel
+@{
+
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+</head>
+
+@section Scripts{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('#submitButton').click(function() {
+        var loginModel = {
+                    UserName: $('#user').val(),
+                    Password: $('#password').val()
+                };
+        console.log(loginModel);
+        $.ajax({
+            url: "/api/login",
+            type: "POST",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(loginModel),
+            success: function(link)
+            {
+                console.log(link)
+                window.location.href = link;
+            },
+            error: function ajaxError(jqXHR, textStatus, errorThrown) 
+            {
+                alert("User Not Found!")
+            }
+        });
+    });
+});
+</script>
+}
+
+<body>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+<br>
+<br>
+<br>
+<form id="loginForm">
+    <input id = "user" type="text" name="UserName" placeholder="Username" />
+    <input id = "password" type="password" name="Password" placeholder="Password" />
+    <button type="button" id="submitButton">Login</button>
+</form>
+
+</body>
+</html>
+

@@ -1,0 +1,85 @@
+﻿@page
+@model SessionApp.Pages.User.ProtectedModel
+@{
+}
+<!DOCTYPE html>
+<html>
+@section Scripts{
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+<script>
+function getCookie(cookieName) {
+    var name = cookieName + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var cookieArray = decodedCookie.split(';');
+
+    for (var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i];
+        while (cookie.charAt(0) === ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name) === 0) {
+            return cookie.substring(name.length, cookie.length);
+        }
+    }
+    return "";
+}
+
+$(document).ready(function() {
+    var sessionId = "";
+    //sessionId = getCookie("SessionKeySessionId");
+    //var urlParams = new URLSearchParams(window.location.search);
+    console.log(sessionId);
+    //if(urlParams.has('SessionId'))
+    //{
+    //    sessionId = urlParams.get('SessionId');
+    //    //document.cookie = "SessionKeySessionId="+sessionId; //set cookie!!
+    //    console.log(getCookie("SessionKeySessionId"));
+    //}
+
+    //authorization!
+    $.ajax({
+        url: "https://localhost:7289/api/authorize/sessionId",
+        type: "POST",
+        data: JSON.stringify(sessionId),
+        contentType: "application/json; charset=utf-8",
+        xhrFields: {
+            withCredentials: true // Include cookies
+        },       
+        success: function(data){
+            console.log("Success");
+        },
+        error: function ajaxError(jqXHR, textStatus, errorThrown) {
+            window.location.href = "https://localhost:7289/api/login?referringUrl=https://localhost:5001/api/user/protected"; // referringUrl - this is where you want to get
+        }
+    });
+
+    $('#logoutButton').click(function(){
+        console.log("Logging out");
+        $.ajax({
+            url:"https://localhost:7289/api/logout",
+            type: "GET",
+            xhrFields: {
+                withCredentials: true // Include cookies
+            },
+            success: function()
+            {
+                console.log("Logged out");
+                location.reload();
+            },
+            error: function ajaxError(jqXHR, textStatus, errorThrown) {
+            alert("Error!");    
+            }
+        });
+    });
+});
+</script>
+}
+<body>
+    <p>Protected page!!!</p>
+    <br />
+    <br />
+    <button type="button" id="logoutButton">Logout</button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form</title>
+    <!-- Include jQuery -->
+    
+</head>
+
+@section Scripts{
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+
+$(document).ready(function() {
+    $('#submitButton').click(function() {
+        var loginModel = {
+                    UserName: $('#user').val(),
+                    Password: $('#password').val()
+                };
+        console.log(loginModel);
+        $.ajax({
+            url: "/api/login",
+            type: "POST",
+            //dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            data: JSON.stringify(loginModel),
+            success: function(){
+                console.log("Success");
+                //window.location.href = "https://localhost:7098/api/user/public";
+            },
+            error: function ajaxError(jqXHR, textStatus, errorThrown) {
+                //var err = JSON.parse(jqXHR.responseText)
+                alert(textStatus);
+                //window.location.href = "https://localhost:7098/Privacy";
+
+            }
+        });
+    });
+});
+</script>
+}

@@ -1,0 +1,65 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = JwtApp
+build_property.RootNamespace = JwtApp
+build_property.ProjectDir = D:\Universitate\Praktika\Learning\C#\JwtApp\JwtApp\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Universitate\Praktika\Learning\C#\JwtApp\JwtApp
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/Cookie/Cookie.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29va2llXENvb2tpZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/errors/401.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZXJyb3JzXDQwMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/errors/404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcZXJyb3JzXDQwNC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/User/Protected.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxQcm90ZWN0ZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/User/Public.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXNlclxQdWJsaWMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Universitate/Praktika/Learning/C\#/JwtApp/JwtApp/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fav9oieyvz
